@@ -1,15 +1,30 @@
-//
-//  main.cpp
-//  hhh
-//
-//  Created by apple on 2018/9/14.
-//  Copyright © 2018年 apple. All rights reserved.
-//
 
-#include <iostream>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+
+
+#include <stdio.h>
+#include <string.h>
+char *my_strcpy (char *a , char *b)
+{
+    char *c=a;
+    while (*b != '\0' )
+    {
+        *a=*b;
+        a++;
+        b++;
+        
+    }
+    *a='\0';
+    return c;
+}
+int main(int argc,char *argv[])
+{
+    int i;
+    
+    char s1[]="abc";
+    char s2[]="def";
+    my_strcpy(s1,s2);
+    printf("复制后的为%s\n",my_strcpy(s1,s2));
     return 0;
 }
+
